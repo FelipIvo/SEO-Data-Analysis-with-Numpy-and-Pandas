@@ -1,0 +1,36 @@
+import pandas as pd
+import numpy as np
+
+# Criando um DataFrame com dados simulados de SEO
+data = {
+    'URL': [
+        'https://example.com/page1',
+        'https://example.com/page2',
+        'https://example.com/page3',
+        'https://example.com/page4'
+    ],
+    'Palavra-chave': ['python seo', 'data analysis', 'machine learning', 'seo optimization'],
+    'Posição Google': [3, 10, 7, 2],
+    'Cliques': [150, 50, 75, 200],
+    'Impressões': [5000, 1200, 3000, 7000],
+}
+
+df = pd.DataFrame(data)
+
+# Exibir as primeiras linhas do DataFrame
+print("\nDados de SEO:\n", df)
+
+# Calculando a média de cliques e impressões usando NumPy
+mean_clicks = np.mean(df['Cliques'])
+mean_impressions = np.mean(df['Impressões'])
+print(f"\nMédia de Cliques: {mean_clicks:.2f}")
+print(f"Média de Impressões: {mean_impressions:.2f}")
+
+# Analisando a relação entre posição no Google e CTR usando NumPy
+# Calculando a correlação entre a posição no Google e os cliques
+correlation_matrix = np.corrcoef(df['Posição Google'], df['Cliques'])
+print("\nCorrelação entre Posição no Google e Cliques:\n", correlation_matrix)
+
+# Adicionando uma nova coluna com o CTR (Click-Through Rate) calculado usando NumPy
+df['CTR'] = np.divide(df['Cliques'], df['Impressões']) * 100
+print("\nDataFrame com CTR calculado:\n", df) 
