@@ -35,16 +35,6 @@ Pandas
 
 NumPy
 
-📂 Dataset Structure
-
-The simulated dataset contains the following columns:
-
-Column Name	Description
-URL	Web page URL
-Keyword	Target keyword for SEO
-Google Position	Ranking position on Google search results
-Clicks	Number of clicks received
-Impressions	Number of times the page appeared in search
 📈 Analysis Performed
 1. Data Visualization
 
@@ -81,7 +71,7 @@ This metric represents the percentage of impressions that resulted in clicks.
 
 Clone the repository:
 
-git clone https://github.com/your-username/seo-data-analysis.git
+git clone https://github.com/FelipIvo/SEO-Data-Analysis-with-Numpy-and-Pandas.git
 
 
 Install dependencies:
